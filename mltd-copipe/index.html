@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>なんとなくミリシタ関連をコピペするツール</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,noarchive,nofollow">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        h1 {
+            font-size: 2em;
+        }
+        h2 {
+            font-size: 1.7em;
+        }
+        h3,label {
+            font-size: 1.5em;
+            padding-left: 10px;
+            border-left: 6px solid var(--bs-gray-500);
+        }
+        h4,
+        h5 {
+            font-size: 1.25em;
+            padding-left: 10px;
+            border-left: 6px solid var(--bs-gray-200);
+        }
+        h5 {
+            font-size: 1.15em;
+            color: var(--bs-gray-600);
+        }
+        label {
+            font-size: 1em;
+            user-select: none;
+        }
+        :root {
+            --btn-width: 2em;
+        }
+        div:has(input[type=text], textarea, select) {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0 3px;
+            margin-bottom: 1em;
+
+            & label.form-label {
+                grid-column: span 2 / span 2;
+            }
+        }
+    </style>
+</head>
+<body style="max-width: 765px; margin: 0 auto; padding: 0.5em;">
+    <h2>なんとなくミリシタ関連をコピペするツール</h2>
+    <p>急にシンプルな52人の配列が欲しいときがあるじゃないですか、あるんです。</p>
+    <h2>名前</h2>
+    <div>
+        <label class="form-label">個人名</label>
+        <select class="form-select" data-copy-target>
+            <option>天海春香</option>
+            <option>如月千早</option>
+            <option>星井美希</option>
+            <option>萩原雪歩</option>
+            <option>高槻やよい</option>
+            <option>菊地真</option>
+            <option>水瀬伊織</option>
+            <option>四条貴音</option>
+            <option>秋月律子</option>
+            <option>三浦あずさ</option>
+            <option>双海亜美</option>
+            <option>双海真美</option>
+            <option>我那覇響</option>
+            <option>春日未来</option>
+            <option>最上静香</option>
+            <option>伊吹翼</option>
+            <option>田中琴葉</option>
+            <option>島原エレナ</option>
+            <option>佐竹美奈子</option>
+            <option>所恵美</option>
+            <option>徳川まつり</option>
+            <option>箱崎星梨花</option>
+            <option>野々原茜</option>
+            <option>望月杏奈</option>
+            <option>ロコ</option>
+            <option>七尾百合子</option>
+            <option>高山紗代子</option>
+            <option>松田亜利沙</option>
+            <option>高坂海美</option>
+            <option>中谷育</option>
+            <option>天空橋朋花</option>
+            <option>エミリー</option>
+            <option>北沢志保</option>
+            <option>舞浜歩</option>
+            <option>木下ひなた</option>
+            <option>矢吹可奈</option>
+            <option>横山奈緒</option>
+            <option>二階堂千鶴</option>
+            <option>馬場このみ</option>
+            <option>大神環</option>
+            <option>豊川風花</option>
+            <option>宮尾美也</option>
+            <option>福田のり子</option>
+            <option>真壁瑞希</option>
+            <option>篠宮可憐</option>
+            <option>百瀬莉緒</option>
+            <option>永吉昴</option>
+            <option>北上麗花</option>
+            <option>周防桃子</option>
+            <option>ジュリア</option>
+            <option>白石紬</option>
+            <option>桜守歌織</option>
+            <option>音無小鳥</option>
+            <option>青羽美咲</option>
+            <option>高木順二朗</option>
+            <option>詩花</option>
+            <option>玲音</option>
+            <option>宮本フレデリカ</option>
+            <option>一ノ瀬志希</option>
+        </select>
+    </div>
+    <div>
+        <label class="form-label">765 MILLION ALLSTARS</label>
+        <input type="text" class="form-control"
+            value='["天海春香","如月千早","星井美希","萩原雪歩","高槻やよい","菊地真","水瀬伊織","四条貴音","秋月律子","三浦あずさ","双海亜美","双海真美","我那覇響","春日未来","最上静香","伊吹翼","田中琴葉","島原エレナ","佐竹美奈子","所恵美","徳川まつり","箱崎星梨花","野々原茜","望月杏奈","ロコ","七尾百合子","高山紗代子","松田亜利沙","高坂海美","中谷育","天空橋朋花","エミリースチュアート","北沢志保","舞浜歩","木下ひなた","矢吹可奈","横山奈緒","二階堂千鶴","馬場このみ","大神環","豊川風花","宮尾美也","福田のり子","真壁瑞希","篠宮可憐","百瀬莉緒","永吉昴","北上麗花","周防桃子","ジュリア","白石紬","桜守歌織"];'
+            readonly data-copy-target>
+    </div>
+    <div>
+        <label class="form-label">765PRO ALLSTARS</label>
+        <input type="text" class="form-control"
+            value='["天海春香","如月千早","星井美希","萩原雪歩","高槻やよい","菊地真","水瀬伊織","四条貴音","秋月律子","三浦あずさ","双海亜美","双海真美","我那覇響"];'
+            readonly data-copy-target>
+    </div>
+    <div>
+        <label class="form-label">MILLIONSTARS</label>
+        <input type="text" class="form-control"
+            value='["春日未来","最上静香","伊吹翼","田中琴葉","島原エレナ","佐竹美奈子","所恵美","徳川まつり","箱崎星梨花","野々原茜","望月杏奈","ロコ","七尾百合子","高山紗代子","松田亜利沙","高坂海美","中谷育","天空橋朋花","エミリースチュアート","北沢志保","舞浜歩","木下ひなた","矢吹可奈","横山奈緒","二階堂千鶴","馬場このみ","大神環","豊川風花","宮尾美也","福田のり子","真壁瑞希","篠宮可憐","百瀬莉緒","永吉昴","北上麗花","周防桃子","ジュリア","白石紬","桜守歌織"];'
+            readonly data-copy-target>
+    </div>
+    <h2>カラー</h2>
+    <p>参考サイト→ <a href="https://imas-palette.vercel.app/">im@s-palette</a> 色検索&コピペが超便利です！</p>
+    <hr>
+    <p>
+        <ul>
+            <li>ミリオンライブとアイドルマスターのブランドカラー</li>
+            <li>ミリシタ属性カラー</li>
+            <li>ミリシタ実装アイドル（56人）の個人カラー</li>
+            <li style="list-style: none;"></li>
+        </ul>
+    </p>
+    <p>…のHEX・RGB・HSLの値です。</p>
+    <div>
+        <label class="form-label">CSS変数</label>
+        <textarea class="form-control" rows="3" readonly data-copy-target>
+:root{
+	/* BRAND */
+	--imasml-brand: #ffc20b;
+	--imasml-brand-rgb: 255, 194, 11;
+	--imasml-brand-hsl: 45, 100, 52;
+
+	--imas-brand: #f34e6c;
+	--imas-brand-rgb: 243, 78, 108;
+	--imas-brand-hsl: 349, 87, 63;
+
+	/* TYPE */
+	--imasml-princess: #ff2284;
+	--imasml-princess-rgb: 255, 34, 132;
+	--imasml-princess-hsl: 333, 100, 57;
+
+	--imasml-fairy: #005eff;
+	--imasml-fairy-rgb: 0, 94, 255;
+	--imasml-fairy-hsl: 218, 100, 50;
+
+	--imasml-angel: #ffbb00;
+	--imasml-angel-rgb: 255, 187, 0;
+	--imasml-angel-hsl: 44, 100, 50;
+
+	/* IDOL 765PRO ALLSTARS */
+	--imasml-haruka: #e22b30;
+	--imasml-haruka-rgb: 226, 43, 48;
+	--imasml-haruka-hsl: 358, 76, 53;
+
+	--imasml-chihaya: #2743d2;
+	--imasml-chihaya-rgb: 39, 67, 210;
+	--imasml-chihaya-hsl: 230, 69, 49;
+
+	--imasml-miki: #b4e04b;
+	--imasml-miki-rgb: 180, 224, 75;
+	--imasml-miki-hsl: 78, 71, 59;
+
+	--imasml-yukiho: #d3dde9;
+	--imasml-yukiho-rgb: 211, 221, 233;
+	--imasml-yukiho-hsl: 213, 33, 87;
+
+	--imasml-yayoi: #f39939;
+	--imasml-yayoi-rgb: 243, 153, 57;
+	--imasml-yayoi-hsl: 31, 89, 59;
+
+	--imasml-makoto: #515558;
+	--imasml-makoto-rgb: 81, 85, 88;
+	--imasml-makoto-hsl: 206, 4, 33;
+
+	--imasml-iori: #fd99e1;
+	--imasml-iori-rgb: 253, 153, 225;
+	--imasml-iori-hsl: 317, 96, 80;
+
+	--imasml-takane: #a6126a;
+	--imasml-takane-rgb: 166, 18, 106;
+	--imasml-takane-hsl: 324, 80, 36;
+
+	--imasml-ritsuko: #01a860;
+	--imasml-ritsuko-rgb: 1, 168, 96;
+	--imasml-ristuko-hsl: 154, 99, 33;
+
+	--imasml-azusa: #9238be;
+	--imasml-azusa-rgb: 146, 56, 190;
+	--imasml-azusa-hsl: 280, 54, 48;
+
+	--imasml-ami: #ffe43f;
+	--imasml-ami-rgb: 255, 228, 63;
+	--imasml-ami-hsl: 52, 100, 62;
+
+	--imasml-mami: #ffe43f;
+	--imasml-mami-rgb: 255, 228, 63;
+	--imasml-mami-hsl: 52, 100, 62;
+
+	--imasml-hibiki: #01adb9;
+	--imasml-hibiki-rgb: 1, 173, 185;
+	--imasml-hibiki-hsl: 184, 99, 36;
+
+	/* IDOL 765PRO MILLIONSTARS */
+	--imasml-mirai: #ea5b76;
+	--imasml-mirai-rgb: 234, 91, 118;
+	--imasml-mirai-hsl: 349, 77, 64;
+
+	--imasml-sizuka: #6495cf;
+	--imasml-sizuka-rgb: 100, 149, 207;
+	--imasml-sizuka-hsl: 213, 53, 60;
+
+	--imasml-tsubasa: #fed552;
+	--imasml-tsubasa-rgb: 254, 213, 82;
+	--imasml-tsubasa-hsl: 46, 99, 66;
+
+	--imasml-kotoha: #92cfbb;
+	--imasml-kotoha-rgb: 146, 207, 187;
+	--imasml-kotoha-hsl: 160, 39, 69;
+
+	--imasml-elena: #9bce92;
+	--imasml-elena-rgb: 155, 206, 146;
+	--imasml-elena-hsl: 111, 38, 69;
+
+	--imasml-minako: #58a6dc;
+	--imasml-minako-rgb: 88, 166, 220;
+	--imasml-minako-hsl: 205, 65, 60;
+
+	--imasml-megumi: #454341;
+	--imasml-megumi-rbg: 69, 67, 65;
+	--imasml-megumi-hsl: 30, 3, 26;
+
+	--imasml-matsuri: #5abfb7;
+	--imasml-matsuri-rgb: 90, 191, 183;
+	--imasml-matsuri-hsl: 175, 44, 55;
+
+	--imasml-serika: #ed90ba;
+	--imasml-serika-rgb: 237, 144, 186;
+	--imasml-serika-hsl: 333, 72, 75;
+
+	--imasml-akane: #eb613f;
+	--imasml-akane-rgb: 235, 97, 63;
+	--imasml-akane-hsl: 12, 81, 58;
+
+	--imasml-anna: #7e6ca8;
+	--imasml-anna-rgb: 126, 108, 168;
+	--imasml-anna-hsl: 258, 26, 54;
+
+	--imasml-roco: #fff03c;
+	--imasml-roco-rgb: 255, 240, 60;
+	--imasml-roco-hsl: 55, 100, 62;
+
+	--imasml-yuriko: #c7b83c;
+	--imasml-yuriko-rgb: 199, 184, 60;
+	--imasml-yuriko-hsl: 54, 55, 51;
+
+	--imasml-sayoko: #7f6575;
+	--imasml-sayoko-rgb: 127, 101, 117;
+	--imasml-sayoko-hsl: 323, 11, 45;
+
+	--imasml-arisa: #b54461;
+	--imasml-arisa-rgb: 181, 68, 97;
+	--imasml-arisa-hsl: 345, 45, 49;
+
+	--imasml-umi: #e9739b;
+	--imasml-umi-rgb: 233, 115, 155;
+	--imasml-umi-hsl: 340, 73, 68;
+
+	--imasml-iku: #f7e78e;
+	--imasml-iku-rgb: 247, 231, 142;
+	--imasml-iku-hsl: 51, 87, 76;
+
+	--imasml-tomoka: #bee3e3;
+	--imasml-tomoka-rgb: 190, 227, 227;
+	--imasml-tomoka-hsl: 180, 40, 82;
+
+	--imasml-emily: #554171;
+	--imasml-emily-rgb: 85, 65, 113;
+	--imasml-emily-hsl: 265, 27, 35;
+
+	--imasml-shiho: #afa690;
+	--imasml-shiho-rgb: 175, 166, 144;
+	--imasml-shiho-hsl: 43, 16, 63;
+
+	--imasml-ayumu: #e25a9b;
+	--imasml-ayumu-rgb: 226, 90, 155;
+	--imasml-ayumu-hsl: 331, 70, 62;
+
+	--imasml-hinata: #d1342c;
+	--imasml-hinata-rgb: 209, 52, 44;
+	--imasml-hinata-hsl: 3, 65, 50;
+
+	--imasml-kana: #f5ad3b;
+	--imasml-kana-rgb: 245, 173, 59;
+	--imasml-kana-hsl: 37, 90, 60;
+
+	--imasml-nao: #788bc5;
+	--imasml-nao-rgb: 120, 139, 197;
+	--imasml-nao-hsl: 225, 40, 62;
+
+	--imasml-chizuru: #f19557;
+	--imasml-chizuru-rgb: 241, 149, 87;
+	--imasml-chizuru-hsl: 24, 85, 64;
+
+	--imasml-konomi: #f1becb;
+	--imasml-konomi-rgb: 241, 190, 203;
+	--imasml-konomi-hsl: 345, 65, 85;
+
+	--imasml-tamaki: #ee762e;
+	--imasml-tamaki-rgb: 238, 118, 46;
+	--imasml-tamaki-hsl: 23, 85, 56;
+
+	--imasml-fuka: #7278a8;
+	--imasml-fuka-rgb: 114, 120, 168;
+	--imasml-fuka-hsl: 233, 24, 55;
+
+	--imasml-miya: #d7a96b;
+	--imasml-miya-rgb: 215, 169, 107;
+	--imasml-miya-hsl: 34, 57, 63;
+
+	--imasml-noriko: #eceb70;
+	--imasml-noriko-rgb: 236, 235, 112;
+	--imasml-noriko-hsl: 60, 77, 68;
+
+	--imasml-mizuki: #99b7dc;
+	--imasml-mizuki-rgb: 153, 183, 220;
+	--imasml-mizuki-hsl: 213, 49, 73;
+
+	--imasml-karen: #b63b40;
+	--imasml-karen-rgb: 182, 59, 64;
+	--imasml-karen-hsl: 358, 51, 47;
+
+	--imasml-rio: #f19591;
+	--imasml-rio-rgb: 241, 149, 145;
+	--imasml-rio-hsl: 3, 77, 76;
+
+	--imasml-subaru: #aeb49c;
+	--imasml-subaru-rgb: 174, 180, 156;
+	--imasml-subaru-hsl: 75, 14, 66;
+
+	--imasml-reika: #6bb6b0;
+	--imasml-reika-rgb: 107, 182, 176;
+	--imasml-reika-hsl: 175, 34, 57;
+
+	--imasml-momoko: #efb864;
+	--imasml-momoko-rgb: 239, 184, 100;
+	--imasml-momoko-hsl: 36, 81, 66;
+
+	--imasml-julia: #d7385f;
+	--imasml-julia-rgb: 215, 56, 95;
+	--imasml-julia-hsl: 345, 67, 53;
+
+	--imasml-tsumugi: #ebe1ff;
+	--imasml-tsumugi-rgb: 235, 225, 255;
+	--imasml-tsumugi-hsl: 260, 100, 94;
+
+	--imasml-kaori: #274079;
+	--imasml-kaori-rgb: 39, 64, 121;
+	--imasml-kaori-hsl: 222, 51, 31;
+
+	/* IDOL 961PRO */
+	--imasml-shika: #e5f9e4;
+	--imasml-shika-rgb: 229, 249, 228;
+	--imasml-shika-hsl: 117, 64, 94;
+
+	--imasml-leon: #5129a2;
+	--imasmi-leon-rgb: 81, 41, 162;
+	--imasml-leon-hsl: 260, 60, 40;
+
+	/* IDOL CINDERELLA GIRLS */
+	--imasml-frederica: #a20067;
+	--imasml-frederica-rgb: 162, 0, 103;
+	--imasml-frederica-hsl: 322, 100, 32;
+
+	--imasml-shiki: #a50050;
+	--imasml-shiki-rgb: 165, 0, 80;
+	--imasml-shiki-hsl: 331, 100, 32;
+}
+        </textarea>
+    </div>
+    <div>
+        <label class="form-label">↑のCDN版</label>
+        <input type="text" class="form-control"
+            value='https://cdn.jsdelivr.net/gh/loicasan/loicasan.github.io@main/mltd-copipe/imasml-colors.css'
+            readonly data-copy-target>
+    </div>
+    <p><small>※ CDNだと消えかねないので大切なプロジェクトで使いたい場合は保存しておくことをおすすめします。</small></p>
+    <hr>
+    <small class="text-black-50">
+			<p>
+				当サイトに掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。
+			</p>
+		</small>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const targets = document.querySelectorAll('[data-copy-target]');
+            
+            targets.forEach(target => {
+                const button = document.createElement('button');
+                button.innerHTML = '<i class="bi bi-clipboard"></i>';
+                button.className = 'btn btn-outline-primary copy-btn';
+
+                button.addEventListener('click', () => {
+                let textToCopy;
+                
+                if (target.tagName === 'SELECT') {
+                    textToCopy = target.options[target.selectedIndex].text;
+                } else if (target.tagName === 'TEXTAREA' || target.tagName === 'INPUT') {
+                    textToCopy = target.value;
+                }
+                
+                copyToClipboard(textToCopy, button);
+                });
+                
+                target.insertAdjacentElement('afterend', button);
+            });
+            function copyToClipboard(text, button) {
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                textarea.style.position = 'fixed';
+                document.body.appendChild(textarea);
+                textarea.select();
+                
+                try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    showFeedback(button);
+                } else {
+                    console.error('コピーに失敗しました');
+                    button.textContent = '失敗';
+                    setTimeout(() => button.textContent = 'コピー', 2000);
+                }
+                } catch (err) {
+                    console.error('コピーコマンドが実行できませんでした:', err);
+                }
+                
+                document.body.removeChild(textarea);
+            }
+            
+            function showFeedback(button) {
+                const originalText = button.innerHTML;
+                button.textContent = 'コピーしました！';
+                setTimeout(() => {
+                button.innerHTML = originalText;
+                }, 1500);
+            }
+            });
+    </script>
+</body>
+
+</html>

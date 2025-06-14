@@ -1,0 +1,251 @@
+:root{
+	/* BRAND */
+	--imasml-brand: #ffc20b;
+	--imasml-brand-rgb: 255, 194, 11;
+	--imasml-brand-hsl: 45, 100, 52;
+
+	--imas-brand: #f34e6c;
+	--imas-brand-rgb: 243, 78, 108;
+	--imas-brand-hsl: 349, 87, 63;
+
+	/* TYPE */
+	--imasml-princess: #ff2284;
+	--imasml-princess-rgb: 255, 34, 132;
+	--imasml-princess-hsl: 333, 100, 57;
+
+	--imasml-fairy: #005eff;
+	--imasml-fairy-rgb: 0, 94, 255;
+	--imasml-fairy-hsl: 218, 100, 50;
+
+	--imasml-angel: #ffbb00;
+	--imasml-angel-rgb: 255, 187, 0;
+	--imasml-angel-hsl: 44, 100, 50;
+
+	/* IDOL 765PRO ALLSTARS */
+	--imasml-haruka: #e22b30;
+	--imasml-haruka-rgb: 226, 43, 48;
+	--imasml-haruka-hsl: 358, 76, 53;
+
+	--imasml-chihaya: #2743d2;
+	--imasml-chihaya-rgb: 39, 67, 210;
+	--imasml-chihaya-hsl: 230, 69, 49;
+
+	--imasml-miki: #b4e04b;
+	--imasml-miki-rgb: 180, 224, 75;
+	--imasml-miki-hsl: 78, 71, 59;
+
+	--imasml-yukiho: #d3dde9;
+	--imasml-yukiho-rgb: 211, 221, 233;
+	--imasml-yukiho-hsl: 213, 33, 87;
+
+	--imasml-yayoi: #f39939;
+	--imasml-yayoi-rgb: 243, 153, 57;
+	--imasml-yayoi-hsl: 31, 89, 59;
+
+	--imasml-makoto: #515558;
+	--imasml-makoto-rgb: 81, 85, 88;
+	--imasml-makoto-hsl: 206, 4, 33;
+
+	--imasml-iori: #fd99e1;
+	--imasml-iori-rgb: 253, 153, 225;
+	--imasml-iori-hsl: 317, 96, 80;
+
+	--imasml-takane: #a6126a;
+	--imasml-takane-rgb: 166, 18, 106;
+	--imasml-takane-hsl: 324, 80, 36;
+
+	--imasml-ritsuko: #01a860;
+	--imasml-ritsuko-rgb: 1, 168, 96;
+	--imasml-ristuko-hsl: 154, 99, 33;
+
+	--imasml-azusa: #9238be;
+	--imasml-azusa-rgb: 146, 56, 190;
+	--imasml-azusa-hsl: 280, 54, 48;
+
+	--imasml-ami: #ffe43f;
+	--imasml-ami-rgb: 255, 228, 63;
+	--imasml-ami-hsl: 52, 100, 62;
+
+	--imasml-mami: #ffe43f;
+	--imasml-mami-rgb: 255, 228, 63;
+	--imasml-mami-hsl: 52, 100, 62;
+
+	--imasml-hibiki: #01adb9;
+	--imasml-hibiki-rgb: 1, 173, 185;
+	--imasml-hibiki-hsl: 184, 99, 36;
+
+	/* IDOL 765PRO MILLIONSTARS */
+	--imasml-mirai: #ea5b76;
+	--imasml-mirai-rgb: 234, 91, 118;
+	--imasml-mirai-hsl: 349, 77, 64;
+
+	--imasml-sizuka: #6495cf;
+	--imasml-sizuka-rgb: 100, 149, 207;
+	--imasml-sizuka-hsl: 213, 53, 60;
+
+	--imasml-tsubasa: #fed552;
+	--imasml-tsubasa-rgb: 254, 213, 82;
+	--imasml-tsubasa-hsl: 46, 99, 66;
+
+	--imasml-kotoha: #92cfbb;
+	--imasml-kotoha-rgb: 146, 207, 187;
+	--imasml-kotoha-hsl: 160, 39, 69;
+
+	--imasml-elena: #9bce92;
+	--imasml-elena-rgb: 155, 206, 146;
+	--imasml-elena-hsl: 111, 38, 69;
+
+	--imasml-minako: #58a6dc;
+	--imasml-minako-rgb: 88, 166, 220;
+	--imasml-minako-hsl: 205, 65, 60;
+
+	--imasml-megumi: #454341;
+	--imasml-megumi-rbg: 69, 67, 65;
+	--imasml-megumi-hsl: 30, 3, 26;
+
+	--imasml-matsuri: #5abfb7;
+	--imasml-matsuri-rgb: 90, 191, 183;
+	--imasml-matsuri-hsl: 175, 44, 55;
+
+	--imasml-serika: #ed90ba;
+	--imasml-serika-rgb: 237, 144, 186;
+	--imasml-serika-hsl: 333, 72, 75;
+
+	--imasml-akane: #eb613f;
+	--imasml-akane-rgb: 235, 97, 63;
+	--imasml-akane-hsl: 12, 81, 58;
+
+	--imasml-anna: #7e6ca8;
+	--imasml-anna-rgb: 126, 108, 168;
+	--imasml-anna-hsl: 258, 26, 54;
+
+	--imasml-roco: #fff03c;
+	--imasml-roco-rgb: 255, 240, 60;
+	--imasml-roco-hsl: 55, 100, 62;
+
+	--imasml-yuriko: #c7b83c;
+	--imasml-yuriko-rgb: 199, 184, 60;
+	--imasml-yuriko-hsl: 54, 55, 51;
+
+	--imasml-sayoko: #7f6575;
+	--imasml-sayoko-rgb: 127, 101, 117;
+	--imasml-sayoko-hsl: 323, 11, 45;
+
+	--imasml-arisa: #b54461;
+	--imasml-arisa-rgb: 181, 68, 97;
+	--imasml-arisa-hsl: 345, 45, 49;
+
+	--imasml-umi: #e9739b;
+	--imasml-umi-rgb: 233, 115, 155;
+	--imasml-umi-hsl: 340, 73, 68;
+
+	--imasml-iku: #f7e78e;
+	--imasml-iku-rgb: 247, 231, 142;
+	--imasml-iku-hsl: 51, 87, 76;
+
+	--imasml-tomoka: #bee3e3;
+	--imasml-tomoka-rgb: 190, 227, 227;
+	--imasml-tomoka-hsl: 180, 40, 82;
+
+	--imasml-emily: #554171;
+	--imasml-emily-rgb: 85, 65, 113;
+	--imasml-emily-hsl: 265, 27, 35;
+
+	--imasml-shiho: #afa690;
+	--imasml-shiho-rgb: 175, 166, 144;
+	--imasml-shiho-hsl: 43, 16, 63;
+
+	--imasml-ayumu: #e25a9b;
+	--imasml-ayumu-rgb: 226, 90, 155;
+	--imasml-ayumu-hsl: 331, 70, 62;
+
+	--imasml-hinata: #d1342c;
+	--imasml-hinata-rgb: 209, 52, 44;
+	--imasml-hinata-hsl: 3, 65, 50;
+
+	--imasml-kana: #f5ad3b;
+	--imasml-kana-rgb: 245, 173, 59;
+	--imasml-kana-hsl: 37, 90, 60;
+
+	--imasml-nao: #788bc5;
+	--imasml-nao-rgb: 120, 139, 197;
+	--imasml-nao-hsl: 225, 40, 62;
+
+	--imasml-chizuru: #f19557;
+	--imasml-chizuru-rgb: 241, 149, 87;
+	--imasml-chizuru-hsl: 24, 85, 64;
+
+	--imasml-konomi: #f1becb;
+	--imasml-konomi-rgb: 241, 190, 203;
+	--imasml-konomi-hsl: 345, 65, 85;
+
+	--imasml-tamaki: #ee762e;
+	--imasml-tamaki-rgb: 238, 118, 46;
+	--imasml-tamaki-hsl: 23, 85, 56;
+
+	--imasml-fuka: #7278a8;
+	--imasml-fuka-rgb: 114, 120, 168;
+	--imasml-fuka-hsl: 233, 24, 55;
+
+	--imasml-miya: #d7a96b;
+	--imasml-miya-rgb: 215, 169, 107;
+	--imasml-miya-hsl: 34, 57, 63;
+
+	--imasml-noriko: #eceb70;
+	--imasml-noriko-rgb: 236, 235, 112;
+	--imasml-noriko-hsl: 60, 77, 68;
+
+	--imasml-mizuki: #99b7dc;
+	--imasml-mizuki-rgb: 153, 183, 220;
+	--imasml-mizuki-hsl: 213, 49, 73;
+
+	--imasml-karen: #b63b40;
+	--imasml-karen-rgb: 182, 59, 64;
+	--imasml-karen-hsl: 358, 51, 47;
+
+	--imasml-rio: #f19591;
+	--imasml-rio-rgb: 241, 149, 145;
+	--imasml-rio-hsl: 3, 77, 76;
+
+	--imasml-subaru: #aeb49c;
+	--imasml-subaru-rgb: 174, 180, 156;
+	--imasml-subaru-hsl: 75, 14, 66;
+
+	--imasml-reika: #6bb6b0;
+	--imasml-reika-rgb: 107, 182, 176;
+	--imasml-reika-hsl: 175, 34, 57;
+
+	--imasml-momoko: #efb864;
+	--imasml-momoko-rgb: 239, 184, 100;
+	--imasml-momoko-hsl: 36, 81, 66;
+
+	--imasml-julia: #d7385f;
+	--imasml-julia-rgb: 215, 56, 95;
+	--imasml-julia-hsl: 345, 67, 53;
+
+	--imasml-tsumugi: #ebe1ff;
+	--imasml-tsumugi-rgb: 235, 225, 255;
+	--imasml-tsumugi-hsl: 260, 100, 94;
+
+	--imasml-kaori: #274079;
+	--imasml-kaori-rgb: 39, 64, 121;
+	--imasml-kaori-hsl: 222, 51, 31;
+
+	/* IDOL 961PRO */
+	--imasml-shika: #e5f9e4;
+	--imasml-shika-rgb: 229, 249, 228;
+	--imasml-shika-hsl: 117, 64, 94;
+
+	--imasml-leon: #5129a2;
+	--imasmi-leon-rgb: 81, 41, 162;
+	--imasml-leon-hsl: 260, 60, 40;
+
+	/* IDOL CINDERELLA GIRLS */
+	--imasml-frederica: #a20067;
+	--imasml-frederica-rgb: 162, 0, 103;
+	--imasml-frederica-hsl: 322, 100, 32;
+
+	--imasml-shiki: #a50050;
+	--imasml-shiki-rgb: 165, 0, 80;
+	--imasml-shiki-hsl: 331, 100, 32;
+}
