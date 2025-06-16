@@ -39,8 +39,10 @@ p{
     margin-bottom: 0.3em;
 }
 a{
+    --link-color: color-mix(in srgb, var(--primary-color) 70%, var(--brack));
+    --icon-size: 1.25em;
     text-underline-offset: var(--text-underline-offset);
-    color: color-mix(in srgb, var(--primary-color) 70%, var(--brack));
+    color: var(--link-color);
 
     &:hover{
         opacity: 0.75;
@@ -53,9 +55,9 @@ a{
         &::after{
             display: block;
             content: '';
-            width: 1em;
-            height: 1em;
-            background-size: 1em;
+            width: var(--icon-size);
+            height: var(--icon-size);
+            background-size: var(--icon-size);
             margin-top: var(--text-underline-offset);
             margin-left: 4px;
 
@@ -67,6 +69,13 @@ a{
     /*
      * Tabler Icons | https://github.com/tabler/tabler-icons | MIT license
      */
+    & svg{
+        width: var(--icon-size);
+        height: var(--icon-size);
+        stroke: var(--link-color);
+        margin-top: var(--text-underline-offset);
+        margin-left: 4px;
+    }
     &.icon-github::after{
         background-image: url("data:image/svg+xml,%3C!--%0Atags: %5Blogo, website, hosting, project, programming, software, development%5D%0Acategory: Brand%0Aversion: '1.18'%0Aunicode: 'ec1c'%0A--%3E%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'%0A%3E%3Cpath d='M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5' /%3E%3C/svg%3E%0A");
     }
