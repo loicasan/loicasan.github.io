@@ -1,11 +1,12 @@
 /*
 	イベント追加時に更新するところ
 		script.js-----LATEST_ANNIV、EVENT_IDS、FIRST_DATES
-		index.html----#select-loop、冒頭の説明文
+		index.html----冒頭の説明文
 */
-const LATEST_ANNIV = 7;
-const EVENT_IDS = [339, 290, 241, 192, 142, 92, 44];
+const LATEST_ANNIV = 8;
+const EVENT_IDS = [388, 339, 290, 241, 192, 142, 92, 44];
 const FIRST_DATES = [
+    "2025-06-30T00:00:00+09:00",
     "2024-06-30T00:00:00+09:00",
     "2023-06-30T00:00:00+09:00",
     "2022-06-30T00:00:00+09:00",
@@ -32,7 +33,7 @@ async function fetchWithCache(url) {
         const response = await fetch(url, { headers });
 
         if (response.status === 304) {
-            console.log(`[Cache] Using cached data for ${url}`);
+            //console.log(`[Cache] Using cached data for ${url}`);
             const cachedData = localStorage.getItem(dataCacheKey);
             return JSON.parse(cachedData);
         }
@@ -45,7 +46,7 @@ async function fetchWithCache(url) {
                 localStorage.setItem(etagCacheKey, newEtag);
             }
             localStorage.setItem(dataCacheKey, responseDataText);
-            console.log(`[Cache] Fetched and cached new data for ${url}`);
+            //console.log(`[Cache] Fetched and cached new data for ${url}`);
             return JSON.parse(responseDataText);
         }
 
@@ -185,7 +186,6 @@ async function generateTableHtml(apiId, index, idol, rank) {
     return tableHtml;
 }
 
-// displayData function (equivalent to PHP main)
 async function displayData(idol, rank, loop) {
     const resultElement = document.getElementById("result");
     if (!resultElement) {
@@ -198,7 +198,6 @@ async function displayData(idol, rank, loop) {
 
     let htmlOutput = [];
 
-    // Initial "Day" column table HTML string
     const dayColumnHtml = `
         <table class="table table-striped text-nowrap align-middle w-auto">
             <thead>
@@ -226,21 +225,82 @@ async function displayData(idol, rank, loop) {
     const maxLoop = parseInt(loop, 10);
 
     for (let i = 0; i < maxLoop; i++) {
-        if (i >= EVENT_IDS.length) { // Ensure we don't go out of bounds for EVENT_IDS
+        if (i >= EVENT_IDS.length) { 
             console.warn(`Loop index ${i} is out of bounds for EVENT_IDS.`);
             break;
         }
         const eventId = EVENT_IDS[i];
-        const firstDate = FIRST_DATES[i]; // index i corresponds to the i-th most recent event
+        const firstDate = FIRST_DATES[i];
 
         if (!firstDate) {
             htmlOutput.push(`<p>イベントID${eventId}の開始日が設定されていません。</p>`);
             continue;
         }
-        // Pass index `i` to generateTableHtml for FIRST_DATES access
         htmlOutput.push(await generateTableHtml(eventId, i, idol, rank));
     }
 
     resultElement.innerHTML = htmlOutput.join("");
     resultElement.classList.remove("loading");
 }
+
+function updateSelectLoop(){
+    const select = document.getElementById('select-loop-allyear');
+    select.value = LATEST_ANNIV;
+}
+
+document.getElementById("sync-btn").addEventListener("click", function() {
+    let idol = Number(document.getElementById("select-idol").value);
+    let rank = Number(document.getElementById("select-rank").value);
+    let loop = Number(document.getElementById("select-loop").value);
+    
+    let resultElement = document.getElementById("result");
+    resultElement.innerText = "NOW LOADING...";
+    resultElement.classList.add("loading");
+
+    if (typeof displayData === 'function') {
+        displayData(idol, rank, loop);
+    } else {
+        console.error('displayData function is not defined. Make sure script.js is loaded.');
+        resultElement.innerText = "Error: script.js not loaded correctly.";
+        resultElement.classList.remove("loading");
+    }
+});
+
+document.getElementById('switch-option').addEventListener('change', function() {
+    if (this.checked) {
+        document.querySelectorAll('.data-diff').forEach(el => {
+            el.classList.add('d-block');
+            el.classList.remove('d-none');
+        });
+        document.querySelectorAll('.data-date').forEach(el => {
+            el.classList.add('d-none');
+            el.classList.remove('d-block');
+        });
+    } else {
+        document.querySelectorAll('.data-diff').forEach(el => {
+            el.classList.add('d-none');
+            el.classList.remove('d-block');
+        });
+        document.querySelectorAll('.data-date').forEach(el => {
+            el.classList.add('d-block');
+            el.classList.remove('d-none');
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const selects = document.querySelectorAll('select');
+    selects.forEach(select => {
+        const selectedValue = localStorage.getItem(`select-${select.id}`);
+        if (selectedValue) {
+            select.value = selectedValue;
+        }
+    });
+    selects.forEach(select => {
+        select.addEventListener('change', () => {
+            localStorage.setItem(`select-${select.id}`, select.value);
+        });
+    });
+
+    updateSelectLoop();
+});
