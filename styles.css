@@ -43,8 +43,8 @@ p{
 a,
 .btn-link{
     text-underline-offset: var(--text-underline-offset);
-    color: var(--link-color);
-    padding-left: 0;
+    color: var(--link-color) !important;
+    padding-left: 0 !important;
 
     &:hover{
         opacity: 0.75;
