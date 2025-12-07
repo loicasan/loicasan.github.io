@@ -41,7 +41,7 @@ p{
     margin-bottom: 0.3em;
 }
 a,
-.btn-link{
+.btn.btn-link{
     text-underline-offset: var(--text-underline-offset);
     color: var(--link-color) !important;
     padding-left: 0 !important;
