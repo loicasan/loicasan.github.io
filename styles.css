@@ -40,9 +40,11 @@ hr{
 p{
     margin-bottom: 0.3em;
 }
-a{
+a,
+.btn-link{
     text-underline-offset: var(--text-underline-offset);
     color: var(--link-color);
+    padding-left: 0;
 
     &:hover{
         opacity: 0.75;
