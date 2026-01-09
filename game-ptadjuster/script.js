@@ -171,7 +171,7 @@ document.getElementById('game-name').addEventListener('change', function() {
 									'<option value="tour">ツアー系</option>' +
 									'<option value="tale">テール系</option>' +
 									'<option value="trust">トラスト</option>' +
-									'<option value="treasure" disabled>トレジャー</option>';
+									'<option value="treasure">トレジャー</option>';
 	}
 	var eventValue = gameEventSelect.value;
 	loadEventData(selectedValue, eventValue);
