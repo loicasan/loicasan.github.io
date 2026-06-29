@@ -80,7 +80,7 @@ async function generateTableHtml(apiId, index, idol, rank) {
         jsonData = await fetchWithCache(apiUrl);
         if (jsonData === null || !jsonData[0] || !jsonData[0].data || jsonData[0].data.length === 0) {
             console.warn(`[Data Error] No data or empty data for event ID: ${apiId}`, jsonData);
-            return `<p>イベントID:${apiId}のデータ取得に失敗しました。(API Error or No Data)</p>`;
+            return `<p style="writing-mode: vertical-rl;">イベントID:${apiId}のデータ取得に失敗しました。<br />ボーダーがまだ未計測なのかもしれません。</p>`;
         }
     } catch (error) {
         console.error(`[Generate Table Error] Failed to fetch data for event ID: ${apiId}`, error);
