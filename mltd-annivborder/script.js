@@ -3,9 +3,10 @@
 		script.js-----LATEST_ANNIV、EVENT_IDS、FIRST_DATES
 		index.html----冒頭の説明文
 */
-const LATEST_ANNIV = 8;
-const EVENT_IDS = [388, 339, 290, 241, 192, 142, 92, 44];
+const LATEST_ANNIV = 9;
+const EVENT_IDS = [437, 388, 339, 290, 241, 192, 142, 92, 44];
 const FIRST_DATES = [
+    "2026-06-30T00:00:00+09:00",
     "2025-06-30T00:00:00+09:00",
     "2024-06-30T00:00:00+09:00",
     "2023-06-30T00:00:00+09:00",
